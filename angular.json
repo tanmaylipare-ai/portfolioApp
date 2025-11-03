@@ -30,7 +30,9 @@
               "src/styles.css",
               "node_modules/aos/dist/aos.css"
             ],
-            "scripts": []
+            "scripts": {
+              "build": "ng build --configuration production"
+            }
           },
           "configurations": {
             "production": {
