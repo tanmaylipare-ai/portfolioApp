@@ -40,3 +40,8 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# 🔒 Environment files
+# 🔒 Angular environment files (do not expose API keys) 
+src/environments/environment.ts
+src/environments/environment.prod.ts
