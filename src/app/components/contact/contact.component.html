@@ -1,0 +1,90 @@
+<!-- <section id="contact" class="py-20 bg-gray-50">
+  <div class="max-w-4xl mx-auto text-center p-8">
+    <h2 class="text-3xl font-bold mb-8">Contact Me</h2>
+    <form #contactForm="ngForm" (ngSubmit)="sendEmail(contactForm)" class="space-y-4">
+      <input name="name" ngModel placeholder="Your Name" class="w-full border p-3 rounded-md" required>
+      <input name="email" ngModel placeholder="Your Email" class="w-full border p-3 rounded-md" required>
+      <textarea name="message" ngModel rows="4" placeholder="Message" class="w-full border p-3 rounded-md" required></textarea>
+      <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">Send</button>
+    </form>
+  </div>
+</section> -->
+<!-- above section is version 1 -->
+<section id="contact" class="py-20 bg-[#e5e5e5] dark:bg-gray-900 transition-colors duration-500 fade-in-4">
+  <div class="max-w-3xl mx-auto text-center px-6">
+    <h2 class="text-3xl font-bold mb-8 text-gray-900 dark:text-gray-100">Get In Touch</h2>
+
+    <form #contactForm="ngForm" (ngSubmit)="sendEmail(contactForm)" class="space-y-4">
+      <!-- Name Field -->
+      <input
+        name="name"
+        ngModel
+        #name="ngModel"
+        placeholder="Your Name"
+        minlength="2"
+        maxlength="50"
+        required
+        class="w-full border border-gray-400 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-[#e0e0e0] dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100 text-gray-900"
+      >
+      <div *ngIf="name.invalid && name.touched" class="text-red-600 text-sm">
+        <span *ngIf="name.errors?.['required']">Name is required.</span>
+        <span *ngIf="name.errors?.['minlength']">Name must be at least 2 characters.</span>
+        <span *ngIf="name.errors?.['maxlength']">Name is too long.</span>
+      </div>
+
+      <!-- Email Field -->
+      <input
+        name="email"
+        ngModel
+        #email="ngModel"
+        type="email"
+        placeholder="Your Email"
+        required
+        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+        class="w-full border border-gray-400 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-[#e0e0e0] dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100 text-gray-900"
+      >
+      <div *ngIf="email.invalid && email.touched" class="text-red-600 text-sm">
+        <span *ngIf="email.errors?.['required']">Email is required.</span>
+        <span *ngIf="email.errors?.['pattern']">Please enter a valid email.</span>
+      </div>
+
+      <!-- Message Field -->
+      <textarea
+        name="message"
+        ngModel
+        #message="ngModel"
+        rows="4"
+        minlength="10"
+        maxlength="1000"
+        placeholder="Message"
+        required
+        class="w-full border border-gray-400 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-[#e0e0e0] dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100 text-gray-900"
+      ></textarea>
+      <div *ngIf="message.invalid && message.touched" class="text-red-600 text-sm">
+        <span *ngIf="message.errors?.['required']">Message is required.</span>
+        <span *ngIf="message.errors?.['minlength']">Message must be at least 10 characters.</span>
+        <span *ngIf="message.errors?.['maxlength']">Message is too long (max 1000 characters).</span>
+      </div>
+
+      <!-- Submit Button -->
+      <button
+        type="submit"
+        [disabled]="contactForm.invalid || isSending"
+        class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center mx-auto"
+      >
+        <span *ngIf="!isSending">Send Message</span>
+        <span *ngIf="isSending" class="flex items-center gap-2">
+          <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+          </svg>
+          Sending...
+        </span>
+      </button>
+
+      <!-- Success / Error Messages -->
+      <div *ngIf="successMessage" class="text-green-600 dark:text-green-400 mt-4 fade-message">{{ successMessage }}</div>
+      <div *ngIf="errorMessage" class="text-red-600 dark:text-red-400 mt-4 fade-message">{{ errorMessage }}</div>
+    </form>
+  </div>
+</section>

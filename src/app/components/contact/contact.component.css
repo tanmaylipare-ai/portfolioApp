@@ -1,0 +1,8 @@
+.fade-message {
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+.fade-message.hidden {
+  opacity: 0;
+}

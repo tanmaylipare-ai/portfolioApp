@@ -1,0 +1,42 @@
+<!-- <section id="projects" class="py-20">
+  <div class="max-w-6xl mx-auto p-8 text-center">
+    <h2 class="text-3xl font-bold mb-10">Projects</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <app-project-card *ngFor="let project of projects" [project]="project"></app-project-card>
+    </div>
+  </div>
+</section> -->
+<!-- above section is version 1 -->
+ <!-- <section id="projects" class="py-24 bg-gray-50 dark:bg-gray-800 transition-colors" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-10 text-gray-800 dark:text-gray-100">Projects</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <app-project-card *ngFor="let project of projects;
+      let i = index"[attr.data-aos-delay]="i * 100"
+      [project]="project"></app-project-card>
+    </div>
+  </div>
+</section> -->
+
+<!-- version 2 -->
+
+<section
+  id="projects"
+  class="py-20 bg-[#d6d6d6] dark:bg-gray-950 transition-colors duration-500 fade-in-3"
+>
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-10 text-gray-900 dark:text-gray-100">
+      Projects
+    </h2>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-8">
+      <app-project-card
+        *ngFor="let project of projects"
+        [project]="project"
+        data-aos="fade-up"
+        data-aos-duration="800"
+      >
+      </app-project-card>
+    </div>
+  </div>
+</section>

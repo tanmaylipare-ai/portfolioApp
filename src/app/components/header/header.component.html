@@ -1,0 +1,94 @@
+<!-- <header class="fixed top-0 w-full bg-white/70 backdrop-blur-md z-50 shadow-sm">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-3">
+    <h1 class="font-semibold text-lg">Your Name</h1>
+    <nav class="hidden md:flex space-x-8 font-medium">
+      <a href="#about" class="hover:text-blue-600">About</a>
+      <a href="#projects" class="hover:text-blue-600">Projects</a>
+      <a href="#contact" class="hover:text-blue-600">Contact</a>
+    </nav>
+  </div>
+</header> -->
+<!-- The above section was version 1 try -->
+
+<!-- <header
+  class="fixed top-0 left-0 w-full z-50 bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg shadow-sm transition-colors"> -->
+<header
+  class="fixed top-0 left-0 w-full z-50 bg-[#fafafa]/80 dark:bg-gray-900/70 backdrop-blur-lg shadow-sm transition-colors">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+
+    <!-- Logo -->
+    <h1 class="text-xl font-bold text-gray-800 dark:text-gray-100">Tanmay Lipare</h1>
+
+    <!-- Navigation Links -->
+    <nav class="hidden md:flex items-center gap-8 font-medium">
+      <a href="#hero" [class.active]="activeSection === 'hero'" class="nav-link">Home</a>
+      <a href="#about" [class.active]="activeSection === 'about'" class="nav-link">About</a>
+      <a href="#projects" [class.active]="activeSection === 'projects'" class="nav-link">Projects</a>
+      <a href="#contact" [class.active]="activeSection === 'contact'" class="nav-link">Contact</a>
+    </nav>
+
+    <!-- Right Section -->
+    <div class="flex items-center gap-4">
+
+      <!-- Desktop Socials -->
+      <div class="hidden sm:flex gap-4 text-lg">
+        <a href="https://github.com/yourusername" target="_blank"
+           class="hover:text-blue-600 dark:hover:text-blue-400 transition"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank"
+           class="hover:text-blue-600 dark:hover:text-blue-400 transition"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:youremail@example.com"
+           class="hover:text-blue-600 dark:hover:text-blue-400 transition"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+
+      <!-- Mobile Socials Dropdown -->
+      <div class="relative sm:hidden">
+        <button (click)="toggleSocialMenu()" class="text-xl hover:text-blue-600 dark:hover:text-blue-400">
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </button>
+
+        <div
+          *ngIf="showSocials"
+          class="absolute right-0 mt-2 w-32 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg py-2 flex flex-col text-sm">
+          <a href="https://github.com/yourusername" target="_blank"
+             class="px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-2">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank"
+             class="px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-2">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="mailto:youremail@example.com"
+             class="px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-2">
+            <i class="fa-solid fa-envelope"></i> Email
+          </a>
+        </div>
+      </div>
+
+      <!-- Minimalist Dark Mode Toggle -->
+      <button
+        (click)="toggleTheme()"
+        [attr.title]="isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'"
+        class="relative w-14 h-7 flex items-center rounded-full transition-all duration-500
+               bg-gradient-to-r from-[#fafafa] to-gray-300 dark:from-gray-800 dark:to-gray-600 shadow-inner group">
+
+        <i
+          class="fa-solid fa-sun absolute left-1 text-yellow-400 text-xs transition-opacity duration-500"
+          [class.opacity-0]="isDarkMode">
+        </i>
+        <i
+          class="fa-solid fa-moon absolute right-1 text-gray-200 text-xs transition-opacity duration-500"
+          [class.opacity-0]="!isDarkMode">
+        </i>
+
+        <span
+          class="absolute top-0.5 left-0.5 w-6 h-6 rounded-full bg-white dark:bg-gray-200 shadow-md
+                 transition-all duration-500 transform"
+          [ngClass]="{
+            'translate-x-7 shadow-[0_0_8px_2px_rgba(147,197,253,0.4)]': isDarkMode,
+            'shadow-[0_0_8px_2px_rgba(251,191,36,0.4)]': !isDarkMode
+          }">
+        </span>
+      </button>
+    </div>
+  </div>
+</header>

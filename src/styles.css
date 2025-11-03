@@ -1,1 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* @import "tailwindcss"; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}  
+
+body {
+  @apply bg-[#fafafa] text-gray-900 dark:bg-gray-950 dark:text-gray-100 transition-colors duration-500;
+}
+
+section {
+  @apply transition-colors duration-500;
+}
+
+/* Smooth fade-in animation for entire page */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered fade-in for sections */
+.fade-in-1 {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out forwards;
+  animation-delay: 0.1s;
+}
+
+.fade-in-2 {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+
+.fade-in-3 {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+.fade-in-4 {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out forwards;
+  animation-delay: 0.7s;
+}
