@@ -15,6 +15,9 @@ export class HeroComponent implements AfterViewInit{
         'Full Stack Developer',
         'Angular Developer',
         'Python Developer',
+        'Engineer',
+        'Tech Enthusiast'
+        
       ],
       typeSpeed: 70,
       backSpeed: 40,

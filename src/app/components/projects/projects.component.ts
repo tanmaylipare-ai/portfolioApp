@@ -14,15 +14,15 @@ export class ProjectsComponent {
     {
       title: 'Restaurant Management App',
       description: 'Full-stack restaurant app using Angular + FastAPI + PostgreSQL',
-      image: 'assets/restaurant.jpeg',
-      github: 'https://github.com/yourusername/restaurant-app',
+      image: 'assets/restaurant.jpg',
+      github: '#',
       live: '#'
     },
     {
       title: 'Gym Tracker',
       description: 'Workout tracker with routines, sets, and progress graphs',
       image: 'assets/gym.jpeg',
-      github: 'https://github.com/yourusername/gym-tracker',
+      github: '#',
       live: '#'
     },
     // {
