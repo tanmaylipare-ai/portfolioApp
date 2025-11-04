@@ -47,4 +47,4 @@ src/environments/environment.ts
 src/environments/environment.prod.ts
 
 # Ignore local images and assets
-public/assets/
+# public/assets/
