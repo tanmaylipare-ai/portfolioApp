@@ -1,30 +1,53 @@
-<section id="hero" class="min-h-screen flex flex-col justify-center items-center bg-[#d6d6d6] dark:bg-gray-950 transition-colors duration-500 fade-in-1">
-  <div class="flex justify-center mb-6">
-  <img 
-    src="assets/profile_pic.jpg" 
-    alt="Profile" 
-    class="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full shadow-xl border-4 border-gray-200 dark:border-gray-700 transition-all duration-500 hover:scale-105"
+<section
+  id="hero"
+  class="min-h-screen flex flex-col md:flex-row justify-center items-center bg-[#d6d6d6] dark:bg-gray-950 transition-colors duration-500 fade-in-1 px-6 md:px-16 overflow-hidden"
+>
+  <!-- Left Section: Photo + Text -->
+  <div class="flex flex-col items-center md:items-start text-center md:text-left md:w-1/2">
+    <img 
+      src="assets/profile_pic.jpg" 
+      alt="Profile" 
+      class="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full shadow-xl border-4 border-gray-200 dark:border-gray-700 transition-all duration-500 hover:scale-105 mb-6"
+    >
+
+    <h1 class="text-5xl font-extrabold text-gray-800 dark:text-gray-100 mb-3">
+      Hi, I'm <span class="text-blue-600 dark:text-blue-400">Tanmay</span>
+    </h1>
+
+    <h2 class="text-2xl text-gray-600 dark:text-gray-300 mb-6">
+      <span id="typed-text"></span>
+    </h2>
+
+    <p class="text-gray-500 dark:text-gray-400 mb-8 max-w-lg">
+      Building high-performance digital experiences that are
+      <b>reliable</b>, <b>scalable</b>, and <b>designed to delight</b>.
+    </p>
+
+    <div class="flex gap-4">
+      <a
+        href="#projects"
+        class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition"
+      >
+        View Work
+      </a>
+      <a
+        href="#contact"
+        class="border border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 px-6 py-2 rounded-md hover:bg-blue-100 dark:hover:bg-gray-800 transition"
+      >
+        Contact
+      </a>
+    </div>
+  </div>
+
+  <!-- Right Section: Animated SVG -->
+  <div
+    class="hidden md:flex md:w-1/2 justify-center mt-10 md:mt-0 relative group"
   >
-</div>  
-
-  <h1 class="text-5xl font-extrabold text-gray-800 dark:text-gray-100 mb-3">
-    Hi, I'm <span class="text-blue-600 dark:text-blue-400">Tanmay</span>
-  </h1>
-
-  <!-- Typing effect -->
-  <h2 class="text-2xl text-gray-600 dark:text-gray-300 mb-6">
-    <span id="typed-text"></span>
-  </h2>
-
-  <p class="text-gray-500 dark:text-gray-400 mb-8 px-4 md:px-0 max-w-3xl mx-auto">
-    I build elegant, scalable web apps using <b>Angular</b>, <b>Python</b>, and <b>PostgreSQL</b>.
-  </p>
-
-  <div class="flex gap-4">
-    <a href="#projects" class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition">View Work</a>
-    <a href="#contact" class="border border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 px-6 py-2 rounded-md hover:bg-blue-100 dark:hover:bg-gray-800 transition">
-      Contact
-    </a>
+    <img
+      id="hero-svg"
+      src="assets/undraw_vibe-coding_mjme.svg"
+      alt="Coder Illustration"
+      class="w-96 h-auto transition-transform duration-300 ease-out group-hover:scale-105 group-hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.4)] dark:invert-[0.05] dark:brightness-90"
+    />
   </div>
 </section>
-
