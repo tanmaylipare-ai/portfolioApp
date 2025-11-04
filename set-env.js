@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const dir = path.resolve('./src/environments');
-const targetPath = path.join(dir, 'environment.prod.ts');
+const targetPath = path.join(__dirname, 'src/environments/environment.prod.ts');
+const dir = path.dirname(targetPath);
 
 // Ensure directory exists
 if (!fs.existsSync(dir)) {
