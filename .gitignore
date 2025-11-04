@@ -43,6 +43,7 @@ Thumbs.db
 
 # 🔒 Environment files
 # 🔒 Angular environment files (do not expose API keys) 
+src/environments/
 src/environments/environment.ts
 src/environments/environment.prod.ts
 

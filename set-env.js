@@ -1,6 +1,13 @@
 const fs = require('fs');
+const path = require('path');
 
-const targetPath = './src/environments/environment.prod.ts';
+const dir = path.resolve('./src/environments');
+const targetPath = path.join(dir, 'environment.prod.ts');
+
+// Ensure directory exists
+if (!fs.existsSync(dir)) {
+  fs.mkdirSync(dir, { recursive: true });
+}
 
 const envConfigFile = `
 export const environment = {
