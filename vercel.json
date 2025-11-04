@@ -5,7 +5,7 @@
       "src": "angular.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist/portfolioApp"
+        "distDir": "dist/portfolio-app"
       }
     }
   ],
