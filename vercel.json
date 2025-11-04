@@ -2,7 +2,7 @@
   "version": 2,
   "framework": "angular",
   "buildCommand": "npm run build",
-  "outputDirectory": "dist/portfolio-app",
+  "outputDirectory": "dist/portfolio-app/browser",
   "routes": [
     { "handle": "filesystem" },
     { "src": "/.*", "dest": "/index.html" }
