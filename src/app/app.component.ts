@@ -7,11 +7,13 @@ import { ContactComponent } from "./components/contact/contact.component";
 import { ProjectsComponent } from "./components/projects/projects.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import * as AOS from 'aos';
+import { ExperienceComponent } from "./components/experience/experience.component";
+import { EducationComponent } from "./components/education/education.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, HeroComponent, AboutComponent, ContactComponent, ProjectsComponent, FooterComponent],
+  imports: [HeaderComponent, HeroComponent, AboutComponent, ContactComponent, ProjectsComponent, FooterComponent, ExperienceComponent, EducationComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

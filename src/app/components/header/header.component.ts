@@ -35,7 +35,7 @@ toggleSocialMenu() {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    const sections = ['hero', 'about', 'projects', 'contact'];
+    const sections = ['hero', 'about', 'experience', 'education', 'projects', 'contact'];
     for (const id of sections) {
       const el = document.getElementById(id);
       if (el) {
