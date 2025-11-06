@@ -47,4 +47,23 @@ toggleSocialMenu() {
       }
     }
   }
+scrollNav(direction: 'left' | 'right') {
+  const nav = document.getElementById('scrolling-nav');
+  if (nav) nav.scrollBy({ left: direction === 'left' ? -120 : 120, behavior: 'smooth' });
+}
+checkNavScroll() {
+  const nav = document.getElementById('scrolling-nav');
+  if (!nav) return;
+
+  const leftIndicator = document.getElementById('nav-left-indicator');
+  const rightIndicator = document.getElementById('nav-right-indicator');
+
+  if (leftIndicator) leftIndicator.style.opacity = nav.scrollLeft > 10 ? "1" : "0.3";
+  if (rightIndicator)
+    rightIndicator.style.opacity = nav.scrollLeft + nav.clientWidth < nav.scrollWidth - 10 ? "1" : "0.3";
+}
+
+ngAfterViewInit() {
+  this.checkNavScroll(); // run once on load
+}
 }

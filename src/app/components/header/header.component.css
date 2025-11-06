@@ -2,6 +2,24 @@
   color: var(--tw-prose-body);
   text-decoration: none;
   transition: color 0.3s ease;
+  position: relative;
+}
+/* Underline animation */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background-color: #3b82f6; /* blue-500 */
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+
+/* Hover effect */
+.nav-link:hover::after {
+  width: 100%;
 }
 
 .nav-link:hover {
@@ -12,4 +30,33 @@
   color: #2563eb;
   border-bottom: 2px solid #2563eb;
   padding-bottom: 2px;
+}
+
+.fade-arrow {
+  background: linear-gradient(to right, rgba(250,250,250,1), rgba(250,250,250,0));
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+.fade-arrow:hover {
+  opacity: 1;
+}
+.dark .fade-arrow {
+  background: linear-gradient(to right, rgba(17,17,17,1), rgba(17,17,17,0));
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+.fade-arrow.hidden {
+  opacity: 0;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
