@@ -11,19 +11,26 @@ import { CommonModule } from '@angular/common';
 })
 export class ProjectsComponent {
  projects = [
+     {
+     title: 'Job application tracker',
+     description: 'A full-stack job application tracking system built with Next.js, featuring a Kanban board interface for managing your job search.',
+     image: 'assets/Job_board.jpeg',
+     github: 'https://github.com/tanmaylipare-ai/job-application-tracker',
+     live: 'https://job-application-tracker-tan-ai.vercel.app/'
+   },
+   {
+     title: 'Gym Tracker',
+     description: 'Workout tracker with routines, sets, and progress graphs',
+     image: 'assets/gym.jpeg',
+     github: 'https://github.com/tanmaylipare-ai/gym_tracking_frontend',
+     live: ''
+   },
     {
       title: 'Restaurant Management App',
       description: 'Full-stack restaurant app using Angular + FastAPI + PostgreSQL',
       image: 'assets/restaurant.jpg',
-      github: '#',
-      live: '#'
-    },
-    {
-      title: 'Gym Tracker',
-      description: 'Workout tracker with routines, sets, and progress graphs',
-      image: 'assets/gym.jpeg',
-      github: '#',
-      live: '#'
+      github: '',
+      live: ''
     },
     // {
     //   title: 'Portfolio Website',
