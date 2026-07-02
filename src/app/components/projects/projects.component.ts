@@ -26,6 +26,13 @@ export class ProjectsComponent {
      live: ''
    },
     {
+     title: 'Rate limiting in ASP.NETCore',
+     description: 'Rate Limiting in ASP.NET Core (.NET 10). This project implements all four built-in algorithms: Fixed Window, Sliding Window, Token Bucket, Concurrency Limiter',
+     image: 'assets/Job_board.jpeg',
+     github: 'https://github.com/tanmaylipare-ai/dotnet_rate_limiting.git',
+     live: 'https://rate-limiting-aspnet-core.onrender.com/scalar/v1'
+   },
+    {
       title: 'Restaurant Management App',
       description: 'Full-stack restaurant app using Angular + FastAPI + PostgreSQL',
       image: 'assets/restaurant.jpg',
