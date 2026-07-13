@@ -22,8 +22,8 @@ export class ProjectsComponent {
      title: 'Gym Tracker',
      description: 'Workout tracker with routines, sets, and progress graphs',
      image: 'assets/gym.jpeg',
-      Frontend: 'https://github.com/tanmaylipare-ai/gym_tracking_frontend/tree/v2',
-      Backend: 'https://github.com/tanmaylipare-ai/gym_tracking_backend/tree/version2',
+      // Frontend: 'https://github.com/tanmaylipare-ai/gym_tracking_frontend/tree/v2',
+      github: 'https://github.com/tanmaylipare-ai/gym_tracking_backend/tree/version2',
       live: 'https://gymtracking-seven.vercel.app/'
    },
     {
